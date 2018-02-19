@@ -20,6 +20,12 @@
             "metadata": {
                 "description": "The replication type for your Storage Account"
             }
+        },
+        "zipLocation": {
+            "type": "string",
+            "metadata": {
+                "description": "URI of the zip to be deployed to Azure Functions"
+            }
         }
     },
     "variables": {
@@ -89,7 +95,7 @@
                         },
                         {
                             "name": "WEBSITE_USE_ZIP",
-                            "value": "https://mffuncdemo.blob.core.windows.net/code/test.zip"
+                            "value": "[parameters('zipLocation')]"
                         }
                     ]
                 }

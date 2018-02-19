@@ -23,3 +23,4 @@ project.lock.json
 appsettings.json
 local.settings.json
 test.zip
+deploy.ps1
