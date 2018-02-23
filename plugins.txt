@@ -1,0 +1,6 @@
+github
+azure-credentials
+azure-cli
+windows-azure-storage
+blueocean
+nodejs
