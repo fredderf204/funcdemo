@@ -32,4 +32,5 @@ pipeline {
                 echo 'slot swap'
             }
         }
+    }
 }
