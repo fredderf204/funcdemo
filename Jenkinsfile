@@ -11,6 +11,7 @@ pipeline {
         stage('Build'){
             steps {
                 echo 'hello...'
+                azureUpload blobProperties: [cacheControl: '', contentEncoding: '', contentLanguage: '', contentType: '', detectContentType: true], containerName: 'code', fileShareName: '', filesPath: 'test.zip', storageCredentialId: 'c407e116-303c-4746-922a-c910939896fd', storageType: 'blobstorage', virtualPath: '${JOB_NAME}/${BUILD_NUMBER}/'
             }
         }
         stage('Test') {
