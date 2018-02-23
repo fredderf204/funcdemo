@@ -22,9 +22,9 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 azureCLI commands: [[exportVariablesString: '', script: 'az']], principalCredentialId: '7f122f04-9592-4782-a3f3-822196987cd8'
-            }
-            timeout(time:30, unit:'MINUTES') {
-                input message:'Yo, do you approve this here deployment?'
+                timeout(time:30, unit:'MINUTES') {
+                    input message:'Yo, do you approve this here deployment?'
+                }
             }
         }
         stage('DeploytoProd'){
